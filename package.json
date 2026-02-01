@@ -1,0 +1,16 @@
+{
+    "name": "campus-placement-system-monorepo",
+    "version": "1.0.0",
+    "description": "Monorepo for Campus Placement System",
+    "scripts": {
+        "install:all": "npm install && cd client && npm install && cd ../server && npm install && cd ..",
+        "start:client": "cd client && npm run dev",
+        "start:server": "cd server && npm start",
+        "start:engine": "cd engine && python app.py",
+        "dev": "concurrently \"npm run start:client\" \"npm run start:server\" \"npm run start:engine\""
+    },
+    "dependencies": {
+        "concurrently": "^8.2.0"
+    },
+    "devDependencies": {}
+}
